@@ -1,0 +1,29 @@
+### Direnv
+.direnv
+/direnv
+
+### Doc related
+*.fdb_latexmk
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.idx
+*.ilg
+*.ind
+*.blx
+*.log
+*.toc
+*.out
+*.psd
+*.fls
+*.lol
+*.html
+*.synctex.gz
+*.main.fdb_latexmk
+unina_asd_notes.pdf
+main.pdf
+# Scripts
+*.bat
+
+
