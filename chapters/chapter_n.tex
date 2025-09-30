@@ -1,0 +1,265 @@
+\chapter{Tracce d'esame}\label{chapter_ex}
+\subsection{Esame del 17 gennaio 2024}
+\begin{enumerate}
+\item Si risponda alle seguenti tre domande a risposta multipla, \textbf{motivando brevemente} l'esclusione delle opzioni considerate errate. \textbf{In assenza di una motivazione, le risposte saranno considerate errate.}
+\begin{enumerate}
+	\item Per ognuno dei seguenti alberi di ricerca, si identifichino le classi di appartenenza tra \textbf{PB} (Perfettamente Bilanciato), \textbf{C} (Completo), \textbf{AVL} e \textbf{RB} (Red Black senza foglie \textsc{NIL}).
+
+	\begin{minipage}{.2\textwidth}
+		\centering
+		$\tau_{1}$
+
+		\begin{tikzpicture}
+			[level distance=6mm,level/.style={sibling distance=20mm/#1}]
+			\node{6}
+			child{
+				node{2}
+				child{
+					node{1}
+					child{
+						node{0}
+					}
+					child[missing]
+				}
+				child{
+					node{4}
+					child{
+						node{3}
+					}
+					child{
+						node{5}
+					}
+				}
+			}
+			child{
+				node{7}
+			};
+		\end{tikzpicture}
+	\end{minipage}
+	\hfil
+		\begin{minipage}{.2\textwidth}
+		\centering
+		$\tau_{2}$
+
+		\begin{tikzpicture}
+			[level distance=6mm,level/.style={sibling distance=20mm/#1}]
+			\node{4}
+			child{
+				node{2}
+				child{
+					node{1}
+					child{
+						node{0}
+					}
+					child[missing]
+				}
+				child{
+					node{3}
+				}
+			}
+			child{
+				node{6}
+				child{
+					node{5}
+				}
+				child{
+					node{8}
+					child{
+						node{7}
+					}
+					child[missing]
+				}
+			};
+		\end{tikzpicture}
+	\end{minipage}
+	\hfil
+		\begin{minipage}{.2\textwidth}
+			\centering
+			$\tau_{3}$
+
+			\begin{tikzpicture}
+				[level distance=6mm,level/.style={sibling distance=20mm/#1}]
+				\node{4}
+				child{
+					node{2}
+					child{
+						node{1}
+						child{
+							node{0}
+						}
+						child[missing]
+					}
+					child{
+						node{3}
+					}
+				}
+				child{
+					node{5}
+					child{
+						node{6}
+					}
+					child[missing]
+				};
+			\end{tikzpicture}
+	\end{minipage}
+	\hfil
+		\begin{minipage}{.2\textwidth}
+			\centering
+			$\tau_{4}$
+
+		\begin{tikzpicture}
+			[level distance=6mm,level/.style={sibling distance=20mm/#1}]
+			\node{5}
+			child{
+				node{3}
+				child{
+					node{1}
+					child{
+						node{0}
+					}
+					child{
+						node{2}
+					}
+				}
+				child{
+					node{4}
+				}
+			}
+			child{
+				node{7}
+				child{
+					node{6}
+				}
+				child[missing]
+			};
+		\end{tikzpicture}
+	\end{minipage}
+	\item Si consideri il grafo orientato rappresentato dalle seguenti liste di adiacenza, in cui le liste dei nodi assenti sono vuote (tali vertici non hanno archi uscenti). Si indichi quali delle cinque sequenze di vertici sotto riportate sono ordinamenti topologici e quali no.
+	\begin{displaymath}
+		\begin{array}{lll}
+			a \rightarrow [b] & & a,b,g,i,c,e,d,f,h \\
+			b \rightarrow [g,i] & & c,e,a,d,h,b,f,g,i \\
+			c \rightarrow [d,e] & & a,b,g,c,e,d,i,h,f \\
+			d \rightarrow [g,h] & & a,c,b,e,i,h,f,d,g \\
+			e \rightarrow [d,f,h] & & c,a,e,b,d,i,h,g,f
+		\end{array}
+	\end{displaymath}
+	\item Dato l'array di numeri naturali $\mathbf{A} = [\stackrel{0}{7},\stackrel{1}{6},\stackrel{2}{8},\stackrel{3}{5},\stackrel{4}{1},\stackrel{5}{9},\stackrel{6}{8},\stackrel{7}{0},\stackrel{8}{2},\stackrel{9}{4},\stackrel{10}{3},\stackrel{11}{1}]$, si identifichi tra le seguenti configurazioni del vettore $\mathbf{A}$ e degli indici $i$ e $j$ il risultato dell'applicazione della funzione \textsc{Partiziona}$(A,3,8)$ usata nell'algoritmo di \textsc{Quicksort} presentato nel corso.
+	\begin{itemize}
+		\item $
+		\begin{array}{cccccccccccc}
+			[\stackrel{0}{7}, &
+			\stackrel{1}{6}, &
+			\stackrel{2}{8}, &
+			\stackrel{3}{2}, &
+			\stackrel{4}{1}, &
+			\stackrel{5}{0}, &
+			\stackrel{6}{8}, &
+			\stackrel{7}{9}, &
+			\stackrel{8}{5}, &
+			\stackrel{9}{4}, &
+			\stackrel{10}{3}, &
+			\stackrel{11}{1}] \\
+			 & %1
+			 & %2
+			 & %3
+			 & %4
+			 & %5
+			 & %6
+			 i j& %7
+			 & %8
+			 & %9
+			 & %10
+			 & %11
+		\end{array}$
+		\item $\begin{array}{cccccccccccc}
+			[\stackrel{0}{7},&
+			\stackrel{1}{6}, &
+			\stackrel{2}{8}, &
+			\stackrel{3}{2}, &
+			\stackrel{4}{1}, &
+			\stackrel{5}{0}, &
+			\stackrel{6}{8}, &
+			\stackrel{7}{9}, &
+			\stackrel{8}{5}, &
+			\stackrel{9}{4}, &
+			\stackrel{10}{3}, &
+			\stackrel{11}{1}] \\
+			   %0
+			 & %1
+			 & %2
+			 & %3
+			 & %4
+			 & %5
+			 j& %6
+			 i& %7
+			 & %8
+			 & %9
+			 & %10
+			 & %11
+		\end{array}$
+		\item $\begin{array}{cccccccccccc}
+			[\stackrel{0}{7}, &
+			\stackrel{1}{6}, &
+			\stackrel{2}{8}, &
+			\stackrel{3}{5}, &
+			\stackrel{4}{1}, &
+			\stackrel{5}{2}, &
+			\stackrel{6}{0}, &
+			\stackrel{7}{8}, &
+			\stackrel{8}{9}, &
+			\stackrel{9}{4}, &
+			\stackrel{10}{3}, &
+			\stackrel{11}{1}] \\
+			  %0
+			  & %1
+			  & %2
+			  & %3
+			  & %4
+			  & %5
+			  & %6
+			  j& %7
+			  i& %8
+			  & %9
+			  & %10
+			  & %11
+		 \end{array}$
+		\item $\begin{array}{cccccccccccc}
+			[\stackrel{0}{7}, &
+			\stackrel{1}{3}, &
+			\stackrel{2}{4}, &
+			\stackrel{3}{2}, &
+			\stackrel{4}{1}, &
+			\stackrel{5}{0}, &
+			\stackrel{6}{8}, &
+			\stackrel{7}{9}, &
+			\stackrel{8}{5}, &
+			\stackrel{9}{8}, &
+			\stackrel{10}{6}, &
+			\stackrel{11}{1}] \\
+			  %0
+			  & %1
+			  & %2
+			  & %3
+			  & %4
+			  & %5
+			  j& %6
+			  i& %7
+			  & %8
+			  & %9
+			  & %10
+			  & %11
+		 \end{array}$
+	\end{itemize}
+\end{enumerate}
+\item Si risolva la seguente equazione di ricorrenza, calcolandone l'\textbf{andamento asintotico}:
+\begin{displaymath}
+	T(n) = \begin{cases}
+		1 & \text{se $n \leq 1$} \\
+		4 \cdot T(\frac{n}{2})+n & \text{altrimenti}
+	\end{cases}
+\end{displaymath}
+\item Si riporti lo pseudo-codice dell'algoritmo di \textbf{visita in profondità su grafo} (con annesso calcolo dei tempi di inizio e fine visita). Inoltre si applichi l'algoritmo al grafo dell'esercizio 1b e si rappresenti graficamente la foresta di visita, dove a ogni nodo è associata la coppia $(d,f)$ dei tempi di inizio ($d$) e fine ($f$) visita.
+\item Si scriva un \textbf{algoritmo ricorsivo} che, dati in ingresso un albero binario $T$ contenente numeri interi e due numeri naturali $l_{1} \leq l_{2}$, restituisca la \textbf{somma dei valori} $d$ di tutti quei nodi con $d$ pari e la cui profondità $p$ non sia compresa tra $l_{1}$ ed $l_{2}$. Tale algoritmo dovrà essere efficiente e non far uso né di variabili globali, né di parametri passati per riferimento. Si scriva infine un algoritmo iterativo che simuli precisamente l'algoritmo ricorsivo di cui sopra.
+\end{enumerate}
+
